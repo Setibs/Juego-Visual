@@ -7,7 +7,7 @@ while True:
     for x in dot:
         if keyboard.is_pressed("space"):
             while keyboard.is_pressed("space"):
-                if len(dot) < 119:
+                if len(dot) < 119: #Límite para una terminal minimizada, ajustar a gusto del consumidor
                     dot += "."
                     print(dot)
                 else:
