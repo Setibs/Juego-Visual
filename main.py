@@ -19,7 +19,7 @@ class MyGridLayout(GridLayout):
 
     def press(self,*args):
         if self.ids.dot_button.state == "down":
-            if len(self.add) < 82:
+            if len(self.add) < 82:    #Longitud de los puntos, ajustar en función de pantalla
                self.add += "."
         else:
             self.add = self.add[:-1]
