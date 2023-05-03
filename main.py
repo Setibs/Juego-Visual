@@ -16,6 +16,7 @@ class MyGridLayout(GridLayout):
         Clock.schedule_interval(self.press,0.005)
     def constante(self,*args):
         self.ids.dot_button.text += self.con + self.add
+        self.ids.dot_button.text = self.ids.dot_button.text[-4400:]
 
     def press(self,*args):
         if self.ids.dot_button.state == "down":
