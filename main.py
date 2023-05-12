@@ -4,8 +4,6 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.clock import Clock
 
 
-
-
 class MyGridLayout(GridLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -14,6 +12,7 @@ class MyGridLayout(GridLayout):
 
         Clock.schedule_interval(self.constante, 0.005)
         Clock.schedule_interval(self.press,0.005)
+
     def constante(self,*args):
         self.ids.dot_button.text += self.con + self.add
         self.ids.dot_button.text = self.ids.dot_button.text[-4400:]
@@ -24,7 +23,6 @@ class MyGridLayout(GridLayout):
                self.add += "."
         else:
             self.add = self.add[:-1]
-
 
 
 class MyApp(App):
